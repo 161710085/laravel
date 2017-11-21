@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    LARAVEL
+      ADIT THIA JANWAR
                 </div>
 
                 <div class="links">

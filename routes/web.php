@@ -24,7 +24,22 @@ Route::get('/kantin/{z}/{x}/{v}', function($a,$b,$c){
 	. 'Minum <i>' .$b. '</i></br>'
 	.  'Ngemil <i>' .$c. '</i></h1>';
     });	
-//route optimal parameter
+//route optional parameter
 Route:: get ('user/{nama?}',function($a="Dadang Conelo"){
 return $a;
+});	
+//tes akses model
+Route::get('/tesmodel',function(){
+	//mnegeluarkan semua data yang ada di table siswa melalui model siswa
+	$a=App\AditModel::all();
+	return$a;
 });
+
+route::get('/tesmodel1',function(){
+	$a=App\AditModel::find(2);
+	return $a;
+});
+route::get('/tesmodel2',function(){
+	$a=App\AditModel::where('nama','a')->get();
+	return $a;
+	});
